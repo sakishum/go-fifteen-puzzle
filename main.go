@@ -24,8 +24,8 @@ func generateNumbers(seed int64) []int {
 	// Randomly swap position
 	rand.Seed(seed)
 	for i := 0; i < 256; i++ {
-		posA := rand.Int31n(rowCount*colCount)
-		posB := rand.Int31n(rowCount*colCount)
+		posA := rand.Int31n(rowCount * colCount)
+		posB := rand.Int31n(rowCount * colCount)
 
 		numbers[posA], numbers[posB] = numbers[posB], numbers[posA]
 	}
@@ -112,7 +112,7 @@ func main() {
 
 func solved(numbers []int) bool {
 	for i := 1; i <= rowCount*colCount; i++ {
-		if numbers[i-1] != i % (rowCount * colCount) {
+		if numbers[i-1] != i%(rowCount*colCount) {
 			return false
 		}
 	}
