@@ -2,4 +2,4 @@
 fifteen puzzle using golang
 
 # Snapshot
-![snapshot]()
+![snapshot](https://raw.githubusercontent.com/yaozongyou/go-fifteen-puzzle/master/snapshot.png)
