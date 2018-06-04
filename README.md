@@ -1,4 +1,4 @@
-# Fifteen Puzzle Using Golang
+# go-fifteen-puzzle
 `go-fifteen-puzzle` is a [Fifteen Puzzle](https://en.wikipedia.org/wiki/Fifteen_puzzle) using golang and ncurses.
 
 # Install

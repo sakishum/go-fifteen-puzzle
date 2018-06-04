@@ -23,11 +23,17 @@ func generateNumbers(seed int64) []int {
 
 	// Randomly swap position
 	rand.Seed(seed)
-	for i := 0; i < 256; i++ {
-		posA := rand.Int31n(rowCount * colCount)
-		posB := rand.Int31n(rowCount * colCount)
-
-		numbers[posA], numbers[posB] = numbers[posB], numbers[posA]
+	for i := 0; i < 1024; i++ {
+		switch rand.Int31n(4) {
+		case 0:
+			moveUp(numbers)
+		case 1:
+			moveDown(numbers)
+		case 2:
+			moveLeft(numbers)
+		case 3:
+			moveRight(numbers)
+		}
 	}
 
 	return numbers
